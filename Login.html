@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KakaoTalk: 클론 프로젝트</title>
+  </head>
+
+  <body>
+    <!--카카오톡 로그인 화면-->
+    <header>
+      <h2>카카오톡을 시작합니다</h2>
+    </header>
+
+    <main>
+      <!--아이디 입력-->
+      <form action="/login" method="post">
+        <p>
+          <label for="useraccount"></label>
+          <input
+            type="text"
+            id="useraccount"
+            name="useraccount"
+            placeholder="이메일 또는 전화번호"
+            required
+            pattern="^(\+?[0-9]{10,15}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$"
+            title="카카오계정 또는 비밀번호를 다시 확인해주세요."
+          />
+        </p>
+
+        <!--비밀번호 입력-->
+        <p>
+          <label for="pwd"></label>
+          <input
+            type="password"
+            id="userpwd"
+            name="userpwd"
+            placeholder="비밀번호"
+            required
+          />
+        </p>
+
+        <!--로그인 버튼-->
+        <p>
+          <!--http://127.0.0.1:5500/login 서버링크-->
+          <!--로그인 버튼을 눌렀을 때 **FriendPage.html**로 이동하려면 a 태그 대신 JavaScript를 사용하여 폼 제출 후 해당 페이지로 리디렉션하는 방법을 사용하면 됩니다.-->
+          <button type="submit">로그인</button>
+        </p>
+      </form>
+
+      <!--계정 생성 버튼-->
+      <form action="/signup" method="post">
+        <p>
+          <!--http://127.0.0.1:5500/signup 서버링크-->
+          <button type="submit">새로운 카카오 계정 만들기</button>
+        </p>
+      </form>
+
+      <!--카카오계정 비밀번호 찾기-->
+      <p>
+        <a href="FindMyKakao.html"> 카카오계정 또는 비밀번호 찾기 </a>
+      </p>
+    </main>
+  </body>
+</html>
